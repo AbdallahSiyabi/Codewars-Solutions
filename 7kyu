@@ -1,1 +1,5 @@
-
+def check_coupon(entered_code, correct_code, current_date, expiration_date):
+    import datetime
+    d1 = datetime.datetime.strptime(current_date, "%B %d, %Y")
+    d2 = datetime.datetime.strptime(expiration_date, "%B %d, %Y")                   
+    return entered_code is correct_code and d2 >= d1
